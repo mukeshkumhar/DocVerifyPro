@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_500"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <!--    Top Nev bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/teal_200"
+        android:layout_height="60sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/homeBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10sp"
+                android:background="#00FFFFFF"
+                android:contentDescription="Home"
+                android:src="@drawable/home_house"
+                tools:ignore="TouchTargetSizeCheck" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:layout_gravity="center"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="#00FFFFFF"
+                android:layout_marginEnd="10sp"
+                android:src="@drawable/person_circle"
+                />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--    Body -->
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/aboutApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Multy Purpus app"
+                android:textColor="@color/teal_200"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:elevation="@dimen/cardview_default_radius"
+                app:cardCornerRadius="15sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="220sp"
+                        android:src="@drawable/webcheck" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/webcheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="65sp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="-7sp"
+                        android:layout_marginBottom="-6sp"
+                        android:backgroundTint="@color/light_blue"
+                        android:fontFamily="@font/agbalumo"
+                        android:text="Check"
+                        android:textSize="24sp"
+                        app:cornerRadius="0sp" />
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                app:cardCornerRadius="15sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="220sp"
+                        android:src="@drawable/resumecheck" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/resumecheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="65sp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="-7sp"
+                        android:layout_marginBottom="-6sp"
+                        android:backgroundTint="@color/light_blue"
+                        android:fontFamily="@font/agbalumo"
+                        android:text="Check"
+                        android:textSize="24sp"
+                        app:cornerRadius="0sp" />
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+    </LinearLayout>
+</FrameLayout>
