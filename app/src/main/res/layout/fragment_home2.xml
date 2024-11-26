@@ -94,13 +94,14 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="220sp"
+                        android:layout_height="180sp"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/webcheck" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/webcheck"
                         android:layout_width="match_parent"
-                        android:layout_height="65sp"
+                        android:layout_height="60sp"
                         android:layout_gravity="bottom"
                         android:layout_marginTop="-7sp"
                         android:layout_marginBottom="-6sp"
@@ -128,13 +129,15 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="220sp"
+                        android:layout_height="180sp"
+                        android:scaleType="centerCrop"
+                        android:paddingTop="30sp"
                         android:src="@drawable/resumecheck" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/resumecheck"
                         android:layout_width="match_parent"
-                        android:layout_height="65sp"
+                        android:layout_height="60sp"
                         android:layout_gravity="bottom"
                         android:layout_marginTop="-7sp"
                         android:layout_marginBottom="-6sp"

@@ -4,17 +4,59 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/purple_500"
     tools:context=".SavedFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="@color/teal_200"
+            android:layout_height="60sp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:id="@+id/backBTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10sp"
+                    android:background="#00FFFFFF"
+                    android:contentDescription="back"
+                    android:src="@drawable/back_svg"
+                    tools:ignore="TouchTargetSizeCheck" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saved"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="#00FFFFFF"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/person_circle"
+                    />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -28,7 +70,12 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_margin="10sp"
+                    android:layout_weight="1"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/resumeheading"
@@ -43,18 +90,33 @@
                         android:layout_height="wrap_content"
                         android:text="Resume subHeadding"/>
                 </LinearLayout>
+                    <ImageButton
+                        android:id="@+id/resume_saved_btn"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20sp"
+                        android:rotation="180"
+                        android:layout_weight="0"
+                        android:background="@color/transparent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/back_svg"/>
+                </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5sp"
                     app:cardCornerRadius="10sp"
-                    app:cardBackgroundColor="@color/light_blue"
-                    >
+                    app:cardBackgroundColor="@color/light_blue">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_margin="10sp"
+                        android:layout_weight="1"
                         android:orientation="vertical">
                         <TextView
                             android:id="@+id/webHeading_1"
@@ -68,6 +130,17 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Web subHeadding"/>
+                    </LinearLayout>
+                    <ImageButton
+                        android:id="@+id/weblink_saved_btn"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20sp"
+                        android:rotation="180"
+                        android:layout_weight="0"
+                        android:background="@color/transparent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/back_svg"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>

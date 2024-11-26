@@ -13,6 +13,9 @@
         android:theme="@style/Theme.DocVerifyPro"
         tools:targetApi="31">
         <activity
+            android:name=".SavedWebActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -32,13 +35,13 @@
             android:exported="false" />
         <activity
             android:name=".HomeFragment"
-            android:exported="false">
-        </activity>
-        <activity android:name=".SavedFragment"
-            android:exported="false"/>
-
-        <activity android:name=".ProfileFragment"
-            android:exported="false"/>
+            android:exported="false"></activity>
+        <activity
+            android:name=".SavedFragment"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileFragment"
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"
