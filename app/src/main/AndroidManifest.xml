@@ -13,6 +13,9 @@
         android:theme="@style/Theme.DocVerifyPro"
         tools:targetApi="31">
         <activity
+            android:name=".ResumeSavedSkills"
+            android:exported="false" />
+        <activity
             android:name=".SavedWebActivity"
             android:exported="false" />
         <activity
@@ -35,7 +38,7 @@
             android:exported="false" />
         <activity
             android:name=".HomeFragment"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".SavedFragment"
             android:exported="false" />
