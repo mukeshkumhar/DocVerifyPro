@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_500"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment">
 
@@ -13,7 +12,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
 
     <androidx.cardview.widget.CardView
@@ -60,7 +60,6 @@
 
 
     <ScrollView
-        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -69,22 +68,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/aboutApp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="sans-serif-condensed"
-                android:text="Multy Purpus app"
-                android:textColor="@color/teal_200"
-                android:textSize="24sp"
-                android:textStyle="bold" />
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10sp"
-                android:elevation="@dimen/cardview_default_radius"
                 app:cardCornerRadius="15sp">
 
                 <LinearLayout
@@ -94,13 +82,14 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="220sp"
+                        android:layout_height="180sp"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/webcheck" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/webcheck"
                         android:layout_width="match_parent"
-                        android:layout_height="65sp"
+                        android:layout_height="60sp"
                         android:layout_gravity="bottom"
                         android:layout_marginTop="-7sp"
                         android:layout_marginBottom="-6sp"
@@ -128,13 +117,15 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="220sp"
+                        android:layout_height="180sp"
+                        android:scaleType="centerCrop"
+                        android:paddingTop="30sp"
                         android:src="@drawable/resumecheck" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/resumecheck"
                         android:layout_width="match_parent"
-                        android:layout_height="65sp"
+                        android:layout_height="60sp"
                         android:layout_gravity="bottom"
                         android:layout_marginTop="-7sp"
                         android:layout_marginBottom="-6sp"

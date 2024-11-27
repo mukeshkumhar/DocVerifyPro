@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SavedResumeActivity">
+    android:background="@color/purple_500"
+    tools:context=".ResumeSavedSkills">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,17 +24,16 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="match_parent">
 
                 <ImageButton
-                    android:id="@+id/homeBTN"
+                    android:id="@+id/backBTN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10sp"
                     android:background="#00FFFFFF"
-                    android:contentDescription="Resume"
+                    android:contentDescription="Home"
                     android:src="@drawable/back_svg"
                     tools:ignore="TouchTargetSizeCheck" />
 
@@ -42,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Resume"
+                    android:text="Save Skills"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="20sp"
@@ -59,13 +59,33 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="All Resume show here"
-            android:layout_gravity="center"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <AutoCompleteTextView
+                    android:id="@+id/savedSkill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:hint="Select Saved Skills"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:background="@color/white"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="skills matched"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+
+        </ScrollView>
     </LinearLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
