@@ -83,7 +83,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:text="Resume Hedding"/>
+                        android:text="Resume Heading"/>
                     <TextView
                         android:id="@+id/resumeSubHeading_"
                         android:layout_width="wrap_content"
@@ -126,7 +126,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            android:text="Web Hedding"/>
+                            android:text="Web Heading"/>
                         <TextView
                             android:id="@+id/websubHeading_1"
                             android:layout_width="wrap_content"
