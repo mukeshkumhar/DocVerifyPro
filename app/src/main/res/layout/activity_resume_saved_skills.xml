@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_500"
+    android:background="@color/light_blue"
     tools:context=".ResumeSavedSkills">
 
     <LinearLayout
@@ -67,23 +67,236 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:background="@drawable/drop_down_field"
+                    android:layout_margin="10sp"
+                    android:textColorHint="@color/light_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
                 <AutoCompleteTextView
                     android:id="@+id/savedSkill"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10sp"
-                    android:hint="Select Saved Skills"
+                    android:hint="Select From Saved"
+                    android:inputType="none"
                     android:gravity="center"
                     android:padding="10sp"
-                    android:background="@color/white"
+                    android:background="@drawable/drop_down_field"
                     />
+                </com.google.android.material.textfield.TextInputLayout>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="skills matched"
+                    android:text="New Skills"
+                    android:textStyle="bold"
                     android:layout_gravity="center"
                     />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:hint="Name of Skills"
+                    android:layout_margin="10sp"
+                    android:gravity="center"
+                    android:padding="5sp"
+                    android:textSize="16sp"
+                    android:background="@drawable/drop_down_field"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Programing Language"
+                    android:layout_marginLeft="10sp"
+                    android:textColor="@color/white"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="Language"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="Language1"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="Language"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="Language1"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="Language"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="Language1"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="Language"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="Language1"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skill"
+                    android:layout_marginLeft="10sp"
+                    android:textColor="@color/white"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="skills"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="skills1"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="skills"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="skills1"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="skills"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="skills1"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="skills"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="skills1"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="skills"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="185sp"
+                        android:layout_height="50sp"
+                        android:hint="skills1"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:background="@drawable/drop_down_field"/>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/save_button"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_background"
+                    android:text="Save"/>
             </LinearLayout>
+
+
 
         </ScrollView>
     </LinearLayout>

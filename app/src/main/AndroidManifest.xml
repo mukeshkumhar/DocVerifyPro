@@ -13,6 +13,12 @@
         android:theme="@style/Theme.DocVerifyPro"
         tools:targetApi="31">
         <activity
+            android:name=".ScanWebActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ScanResumeActivity"
+            android:exported="false" />
+        <activity
             android:name=".ResumeSavedSkills"
             android:exported="false" />
         <activity

@@ -24,6 +24,7 @@ class SavedFragment : Fragment() {
         }
         webButton.setOnClickListener{
             val intent = Intent(requireContext(), SavedWebActivity::class.java)
+            startActivity(intent)
         }
 
 

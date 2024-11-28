@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SavedWebActivity">
+    tools:context=".ScanWebActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +14,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="match_parent"
@@ -41,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Web Saved"
+                    android:text="Web Secure"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="20sp"
@@ -57,6 +56,40 @@
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10sp"
+                    android:text="Past your website link to check all varnability of your website"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/web_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:background="@drawable/drop_down_field"
+                    android:hint="Paste your website link"
+                    android:textSize="16sp"
+                    android:padding="10sp"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/check_linkBTN"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:text="Check"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_background"/>
+            </LinearLayout>
+        </ScrollView>
+
     </LinearLayout>
 
 
