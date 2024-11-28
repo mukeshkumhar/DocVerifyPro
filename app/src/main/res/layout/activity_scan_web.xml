@@ -87,6 +87,13 @@
                     android:text="Check"
                     android:layout_gravity="center"
                     android:background="@drawable/button_background"/>
+                <TextView
+                    android:id="@+id/secure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="10sp"
+                    android:text="Secure?"/>
             </LinearLayout>
         </ScrollView>
 
