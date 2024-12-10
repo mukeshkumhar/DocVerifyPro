@@ -13,7 +13,6 @@ import com.google.android.material.button.MaterialButton
 class HomeFragment : Fragment() {
 
 
-
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
 //    }
@@ -42,7 +41,7 @@ class HomeFragment : Fragment() {
             startActivity(intent)
 
         }
-        binding.webcheck.setOnClickListener{
+        binding.webcheck.setOnClickListener {
             val intent = Intent(requireContext(), ScanWebActivity::class.java)
             startActivity(intent)
         }
@@ -52,7 +51,6 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 
 
 }
