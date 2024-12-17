@@ -30,10 +30,15 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val sharedPreferences = requireContext().getSharedPreferences("user_data", Context.MODE_PRIVATE)
+        val fullName = sharedPreferences.getString("full_name", null)
+
+            binding.userNameText.text = fullName
+
             binding.logoutButton.setOnClickListener{
-                val sharedPreferences = requireContext().getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
+                val sharedPreferences = requireContext().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
                 val editor = sharedPreferences.edit()
-                editor.remove("access_token")
+                editor.remove("AccessToken")
                 editor.apply()
 
                 // Optional: Navigate to login screen or perform other logout actions
