@@ -8,7 +8,6 @@
 
     tools:context=".ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -78,6 +77,7 @@
                     android:src="@drawable/person_circle1"/>
             </com.google.android.material.card.MaterialCardView>
             <TextView
+                android:id="@+id/user_name_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -101,7 +101,6 @@
                         android:layout_height="30sp"
                         android:src="@drawable/page"/>
                     <TextView
-                        android:id="@+id/savedResume"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -122,17 +121,69 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
                     android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="30sp"
-                        android:layout_height="30sp"
-                        android:src="@drawable/logout"/>
-                    <TextView
-                        android:id="@+id/logoutBTN"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textColor="@color/white"
-                        android:text="Logout"/>
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:src="@drawable/logout"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:text="Logout"/>
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/logout_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:rotation="180"
+                        android:layout_marginLeft="250sp"
+                        android:src="@drawable/back_svg"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:layout_marginBottom="5sp"
+                app:cardBackgroundColor="@color/dark_green"
+                app:cardCornerRadius="10sp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:src="@drawable/logout"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:text="Change Password"/>
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/change_password_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:rotation="180"
+                        android:layout_marginLeft="180sp"
+                        android:src="@drawable/back_svg"/>
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>

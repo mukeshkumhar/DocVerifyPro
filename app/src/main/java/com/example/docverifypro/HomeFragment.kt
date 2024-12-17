@@ -1,5 +1,6 @@
 package com.example.docverifypro
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -45,6 +46,11 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), ScanWebActivity::class.java)
             startActivity(intent)
         }
+        val sharedPreferences = requireContext().getSharedPreferences("user_data", Context.MODE_PRIVATE)
+        val userName = sharedPreferences.getString("user_name", null)
+
+        binding.userName.text = userName
+
     }
 
     override fun onDestroyView() {
