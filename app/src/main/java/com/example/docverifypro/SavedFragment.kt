@@ -7,26 +7,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import com.example.docverifypro.databinding.FragmentHome2Binding
+import com.example.docverifypro.databinding.FragmentSavedBinding
 
 
 class SavedFragment : Fragment() {
 
+    private var _binding: FragmentSavedBinding? = null
+    private val binding get() = _binding!!
 
-    fun onViewCreate(view: View, savedInstanceState: Bundle?) {
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val resumeButton: ImageButton= view.findViewById(R.id.resume_saved_btn)
-        val webButton: ImageButton= view.findViewById(R.id.weblink_saved_btn)
-
-        resumeButton.setOnClickListener{
+        binding.resumeSavedBtn.setOnClickListener {
             val intent = Intent(requireContext(), SavedResumeActivity::class.java)
             startActivity(intent)
         }
-        webButton.setOnClickListener{
+        binding.weblinkSavedBtn.setOnClickListener {
             val intent = Intent(requireContext(), SavedWebActivity::class.java)
             startActivity(intent)
         }
-
 
 
     }
@@ -36,7 +37,15 @@ class SavedFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_saved, container, false)
+
+        _binding = FragmentSavedBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 

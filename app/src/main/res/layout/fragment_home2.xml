@@ -1,148 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
 
-    <!--    Top Nev bar -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:ignore="UselessParent">
 
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="match_parent"
-        app:cardBackgroundColor="@color/teal_200"
-        android:layout_height="60sp">
-        <LinearLayout
+        <!--    Top Nev bar -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <ImageButton
-                android:id="@+id/homeBTN"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10sp"
-                android:background="#00FFFFFF"
-                android:contentDescription="Home"
-                android:src="@drawable/home_house"
-                tools:ignore="TouchTargetSizeCheck" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Home"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:layout_weight="1"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:layout_gravity="center"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:background="#00FFFFFF"
-                android:layout_marginEnd="10sp"
-                android:src="@drawable/person_circle"
-                />
+            android:layout_height="60sp"
+            app:cardBackgroundColor="@color/teal_200">
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <!--    Body -->
+                <ImageButton
+                    android:id="@+id/homeBTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10sp"
+                    android:background="#00FFFFFF"
+                    android:contentDescription="Home"
+                    android:src="@drawable/home_house"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Home"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10sp"
+                    android:background="#00FFFFFF"
+                    android:src="@drawable/logout" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--    Body -->
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:paddingBottom="40sp">
 
-
-            <com.google.android.material.card.MaterialCardView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp"
-                app:cardCornerRadius="15sp">
+                android:orientation="vertical">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/user_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="180sp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/webcheck" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/webcheck"
-                        android:layout_width="match_parent"
-                        android:layout_height="60sp"
-                        android:layout_gravity="bottom"
-                        android:layout_marginTop="-7sp"
-                        android:layout_marginBottom="-6sp"
-                        android:backgroundTint="@color/light_blue"
-                        android:fontFamily="@font/agbalumo"
-                        android:text="Check"
-                        android:textSize="24sp"
-                        app:cornerRadius="0sp" />
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="Hello User"/>
 
 
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10sp"
-                app:cardCornerRadius="15sp">
-
-                <LinearLayout
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_margin="10sp"
+                    app:cardCornerRadius="15sp">
 
-                    <ImageView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="180sp"
-                        android:scaleType="centerCrop"
-                        android:paddingTop="30sp"
-                        android:src="@drawable/resumecheck" />
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/resumecheck"
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="180sp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/webcheck" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/webcheck"
+                            android:layout_width="match_parent"
+                            android:layout_height="60sp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="-7sp"
+                            android:layout_marginBottom="-6sp"
+                            android:backgroundTint="@color/dark_green"
+                            android:fontFamily="@font/agbalumo"
+                            android:text="Check"
+                            android:textSize="24sp"
+                            app:cornerRadius="0sp" />
+
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    app:cardCornerRadius="15sp">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="60sp"
-                        android:layout_gravity="bottom"
-                        android:layout_marginTop="-7sp"
-                        android:layout_marginBottom="-6sp"
-                        android:backgroundTint="@color/light_blue"
-                        android:fontFamily="@font/agbalumo"
-                        android:text="Check"
-                        android:textSize="24sp"
-                        app:cornerRadius="0sp" />
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="180sp"
+                            android:paddingTop="30sp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/resumecheck" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/resumecheck"
+                            android:layout_width="match_parent"
+                            android:layout_height="60sp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="-7sp"
+                            android:layout_marginBottom="-6sp"
+                            android:backgroundTint="@color/dark_green"
+                            android:fontFamily="@font/agbalumo"
+                            android:text="Check"
+                            android:textSize="24sp"
+                            app:cornerRadius="0sp" />
 
 
-                </LinearLayout>
+                    </LinearLayout>
 
-            </com.google.android.material.card.MaterialCardView>
+                </com.google.android.material.card.MaterialCardView>
 
-        </LinearLayout>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    app:cardCornerRadius="15sp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="180sp"
+                            android:paddingTop="30sp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/resumecheck" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/qrCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="60sp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="-7sp"
+                            android:layout_marginBottom="-6sp"
+                            android:backgroundTint="@color/dark_green"
+                            android:fontFamily="@font/agbalumo"
+                            android:text="Scan and Ganerate"
+                            android:textSize="24sp"
+                            app:cornerRadius="0sp" />
 
 
-    </ScrollView>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+        </ScrollView>
     </LinearLayout>
 </FrameLayout>

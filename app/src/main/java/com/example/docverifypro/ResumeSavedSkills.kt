@@ -36,12 +36,12 @@ class ResumeSavedSkills : AppCompatActivity() {
             val intent = Intent(this, ScanResumeActivity::class.java)
             startActivity(intent)
         }
-        val autoCompleteTextView: AutoCompleteTextView = binding.savedSkill
+//        val autoCompleteTextView: AutoCompleteTextView = binding.savedSkill
 
         val items = arrayOf("Item 1", "Item 2", "Item 3")
         val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, items)
 
-        autoCompleteTextView.setAdapter(adapter)
-        autoCompleteTextView.threshold = 1
+//        autoCompleteTextView.setAdapter(adapter)
+//        autoCompleteTextView.threshold = 1
     }
 }
