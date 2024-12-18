@@ -64,7 +64,8 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingBottom="40sp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -146,6 +147,42 @@
                             android:backgroundTint="@color/dark_green"
                             android:fontFamily="@font/agbalumo"
                             android:text="Check"
+                            android:textSize="24sp"
+                            app:cornerRadius="0sp" />
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    app:cardCornerRadius="15sp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="180sp"
+                            android:paddingTop="30sp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/resumecheck" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/qrCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="60sp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="-7sp"
+                            android:layout_marginBottom="-6sp"
+                            android:backgroundTint="@color/dark_green"
+                            android:fontFamily="@font/agbalumo"
+                            android:text="Scan and Ganerate"
                             android:textSize="24sp"
                             app:cornerRadius="0sp" />
 

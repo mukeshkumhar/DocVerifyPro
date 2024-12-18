@@ -46,6 +46,10 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), ScanWebActivity::class.java)
             startActivity(intent)
         }
+        binding.qrCode.setOnClickListener{
+            val intent = Intent(requireContext(), QRCode::class.java)
+            startActivity(intent)
+        }
         val sharedPreferences = requireContext().getSharedPreferences("user_data", Context.MODE_PRIVATE)
         val userName = sharedPreferences.getString("user_name", null)
 

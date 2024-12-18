@@ -35,6 +35,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+
     }
 }
 
@@ -50,6 +51,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.vision.common)
+    implementation(libs.play.services.mlkit.barcode.scanning)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -59,4 +62,13 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
     implementation ("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("androidx.activity:activity-ktx:1.8.2")
+//    QR code caner or generater
+
+
+    implementation ("androidx.camera:camera-core:1.4.1")
+    implementation ("androidx.camera:camera-camera2:1.4.1")
+    implementation ("androidx.camera:camera-lifecycle:1.4.1")
+    implementation ("androidx.camera:camera-view:1.4.1")
+    implementation ("androidx.camera:camera-mlkit-vision:1.4.1")
+    implementation ("com.google.mlkit:barcode-scanning:17.3.0")
 }
