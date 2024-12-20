@@ -63,7 +63,8 @@ dependencies {
     implementation ("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("androidx.activity:activity-ktx:1.8.2")
 //    QR code caner or generater
-
+    implementation("com.itextpdf:itextg:5.5.9")
+    implementation("org.apache.poi:poi-ooxml:5.2.3")
 
     implementation ("androidx.camera:camera-core:1.4.1")
     implementation ("androidx.camera:camera-camera2:1.4.1")

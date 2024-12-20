@@ -107,6 +107,7 @@
                     android:background="@color/light_blue"
                     android:src="@drawable/add_square"/>
                 <TextView
+                    android:id="@+id/selectedFilesCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -150,6 +151,12 @@
                     android:layout_gravity="center"
                     android:background="@drawable/button_background"
                     android:text="Scan ->"/>
+                <TextView
+                    android:id="@+id/extractedText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Response"
+                    android:textColor="@color/white"/>
             </LinearLayout>
 
 
