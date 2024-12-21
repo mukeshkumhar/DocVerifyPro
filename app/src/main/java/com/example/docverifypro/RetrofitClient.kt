@@ -8,4 +8,6 @@ interface ApiService {
 
     @POST("users/register") fun registerUser(@Body user: RegisterUser): Call<RegisterResponse>
     @POST("users/login") fun loginUser(@Body user: LoginUser): Call<LoginResponse>
+    @POST("resume/resume-create") fun createResume(@Body resume:ResumeCreate): Call<ResumeResponse>
+    @POST("resume/resume-add-project") fun addProjects(@Body resume:ProjectCreated): Call<ProjectResponse>
 }

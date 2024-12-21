@@ -20,7 +20,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.resumecheck.setOnClickListener{
-            val intent = Intent(requireContext(), ResumeSavedSkills::class.java)
+            val intent = Intent(requireContext(), ScanResumeActivity::class.java)
             startActivity(intent)
         }
 

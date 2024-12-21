@@ -72,10 +72,11 @@ class LoginActivity : AppCompatActivity() {
                         println(response.body())
 
                         val accessToken = response.body()?.data?.accessToken
+                        println(accessToken)
 
                         val sharedPreferences = getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
                         val editor = sharedPreferences.edit()
-                        editor.putString("AccessToken", accessToken)
+                        editor.putString("AccessToken", response.body()?.data?.accessToken)
                         editor.apply()
 
 //                        Saving User Responce in Shared Preferences
@@ -86,6 +87,7 @@ class LoginActivity : AppCompatActivity() {
                         userEditor.putString("user_fullname",response.body()?.data?.user?.fullName)
                         userEditor.putString("user_name",response.body()?.data?.user?.userName)
                         userEditor.putString("user_email",response.body()?.data?.user?.email)
+                        userEditor.putString("user_phone",response.body()?.data?.accessToken)
                         userEditor.apply()
 
 

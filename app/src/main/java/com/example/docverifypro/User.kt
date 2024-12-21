@@ -47,5 +47,75 @@ data class LoginResponse(
     val success: Boolean,
 )
 
+// Resume Created Data Class
+
+data class ResumeCreate(
+    val name: String,
+    val contact: String,
+    val email: String,
+    val address: String,
+    val percentage: Number,
+)
+
+data class ResumeResponse(
+    val statusCode: Int,
+    val data: resumeDataResponse,
+    val message: String,
+    val success: Boolean
+)
+
+data class resumeDataResponse(
+    val _id: String,
+    val name: String,
+    val contact: String,
+    val email: String,
+    val address: String,
+    val percentage: Number,
+    val ownerId: String,
+    val projects: List<projectCreate>,
+    val __v: Int,
+)
+
+data class projectCreate(
+    val projectName: String,
+    val projectSummary: String,
+    val _id: String,
+)
+
+// Resume Add Project
+
+data class ProjectCreated (
+    val projectName: String,
+    val projectSummary: String,
+    val resumeId: String,
+)
+
+data class ProjectResponse(
+    val statusCode: Int,
+    val data: ProjectDataResponse,
+    val message: String,
+    val success: Boolean
+)
+
+data class ProjectDataResponse(
+    val _id: String,
+    val name: String,
+    val contact: String,
+    val email: String,
+    val address: String,
+    val percentage: Number,
+    val ownerId: String,
+    val projects: List<ProjectSave>,
+    val __v: Int,
+
+)
+data class ProjectSave(
+    val projectName: String,
+    val projectSummary: String,
+    val _id: String,
+)
+
+
+
 
 
