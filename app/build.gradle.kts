@@ -70,6 +70,8 @@ dependencies {
     implementation ("com.google.code.gson:gson:2.10")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
 
+    implementation ("com.google.zxing:core:3.5.0")
+
     implementation ("androidx.camera:camera-core:1.4.1")
     implementation ("androidx.camera:camera-camera2:1.4.1")
     implementation ("androidx.camera:camera-lifecycle:1.4.1")

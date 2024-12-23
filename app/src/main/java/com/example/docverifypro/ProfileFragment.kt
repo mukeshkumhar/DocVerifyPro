@@ -30,8 +30,8 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val sharedPreferences = requireContext().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
-        val fullName = sharedPreferences.getString("AccessToken", null)
+        val sharedPreferences = requireContext().getSharedPreferences("user_data", Context.MODE_PRIVATE)
+        val fullName = sharedPreferences.getString("user_fullname", null)
 
             binding.userNameText.text = fullName
 

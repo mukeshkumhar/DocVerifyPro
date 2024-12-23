@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
+    android:id="@+id/saved_fragment_page"
     tools:context=".SavedFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -25,14 +26,14 @@
                 android:layout_height="match_parent">
 
                 <ImageButton
-                    android:id="@+id/backBTN"
+                    android:id="@+id/saveBTN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10sp"
                     android:background="#00FFFFFF"
                     android:contentDescription="back"
-                    android:src="@drawable/back_svg"
+                    android:src="@drawable/save_icon"
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <TextView
@@ -47,6 +48,7 @@
                     android:textStyle="bold" />
 
                 <ImageButton
+                    android:id="@+id/logoutBTN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"

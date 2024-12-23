@@ -19,6 +19,19 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.logoutBTN.setOnClickListener{
+            val sharedPreferences = requireContext().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.remove("AccessToken")
+            editor.apply()
+
+            // Optional: Navigate to login screen or perform other logout actions
+            val intent = Intent(requireContext(), LoginActivity::class.java)
+            startActivity(intent)
+            requireActivity().finish()
+        }
+
         binding.resumecheck.setOnClickListener{
             val intent = Intent(requireContext(), ScanResumeActivity::class.java)
             startActivity(intent)
@@ -32,6 +45,11 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), QRCode::class.java)
             startActivity(intent)
         }
+        binding.qrCodeGenerate.setOnClickListener{
+            val intent = Intent(requireContext(), QRCodeGenerater::class.java)
+            startActivity(intent)
+        }
+
         val sharedPreferences = requireContext().getSharedPreferences("user_data", Context.MODE_PRIVATE)
         val userName = sharedPreferences.getString("user_name", null)
         binding.userName.text = userName

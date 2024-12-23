@@ -15,6 +15,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.result.launch
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.add
@@ -86,11 +87,25 @@ class ScanResumeActivity : AppCompatActivity() {
         val apiServiceWithInterceptor = retrofit.create(ApiService::class.java)
 
         binding.backBTN.setOnClickListener{
-            val intent = Intent(this,ResumeSavedSkills::class.java)
-            startActivity(intent)
+            finish()
         }
 
-        val loadingView = binding.loadingView
+        binding.logoutBTN.setOnClickListener{
+            val sharedPreferences = this.getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.remove("AccessToken")
+            editor.apply()
+
+            // Optional: Navigate to login screen or perform other logout actions
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            this.finish()
+        }
+
+        val loadingText = binding.loadingText
+        val progressBar = binding.progressBar
+
+
 
 
         // File Picker
@@ -136,7 +151,8 @@ class ScanResumeActivity : AppCompatActivity() {
 
         // Text Extraction and Display
         binding.scanPdf.setOnClickListener {
-            loadingView.visibility = View.VISIBLE
+            loadingText.visibility = View.VISIBLE
+            progressBar.visibility = View.VISIBLE
             if (selectedFiles.isNotEmpty()) {
                 val extractedText = StringBuilder()
                 for (uri in selectedFiles) {
@@ -271,17 +287,20 @@ class ScanResumeActivity : AppCompatActivity() {
                             projectsText.append("   ${project.summary}\n")
                         }
                         binding.project.text = projectsText.toString()
-                        loadingView.visibility = View.GONE
+                        loadingText.visibility = View.GONE
+                        progressBar.visibility = View.GONE
                     }
                 }else{
                     binding.output.setText("I will give answer only resume related questions")
                 }
-                loadingView.visibility = View.GONE
+                loadingText.visibility = View.GONE
+                progressBar.visibility = View.GONE
 
             } else {
                 Toast.makeText(this, "Please select files first", Toast.LENGTH_SHORT).show()
             }
-            loadingView.visibility = View.GONE
+            loadingText.visibility = View.GONE
+            progressBar.visibility = View.GONE
         }
 
     }

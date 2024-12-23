@@ -9,6 +9,7 @@
 
     tools:context=".SavedResumeActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,7 +30,7 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/homeBTN"
+                    android:id="@+id/backBTN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -60,12 +61,25 @@
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:layout_width="wrap_content"
+        <ScrollView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="All Resume show here"
-            android:layout_gravity="center"/>
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/resumeRecycleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    tools:listitem="@layout/resume_recycle_view"/>
+            </LinearLayout>
+
+        </ScrollView>
+
+
     </LinearLayout>
 
 

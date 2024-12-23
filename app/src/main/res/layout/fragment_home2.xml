@@ -49,6 +49,7 @@
                     android:textStyle="bold" />
 
                 <ImageButton
+                    android:id="@+id/logoutBTN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -83,41 +84,7 @@
                     android:text="Hello User"/>
 
 
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10sp"
-                    app:cardCornerRadius="15sp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="180sp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/webcheck" />
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/webcheck"
-                            android:layout_width="match_parent"
-                            android:layout_height="60sp"
-                            android:layout_gravity="bottom"
-                            android:layout_marginTop="-7sp"
-                            android:layout_marginBottom="-6sp"
-                            android:backgroundTint="@color/dark_green"
-                            android:fontFamily="@font/agbalumo"
-                            android:text="Check"
-                            android:textSize="24sp"
-                            app:cornerRadius="0sp" />
-
-
-
-                    </LinearLayout>
-
-                </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
@@ -164,6 +131,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="-6sp"
                         android:orientation="vertical">
 
                         <ImageView
@@ -171,10 +139,71 @@
                             android:layout_height="180sp"
                             android:paddingTop="30sp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/resumecheck" />
+                            android:src="@drawable/qr_code" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-6sp"
+                            android:orientation="horizontal">
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/qrCodeGenerate"
+                                android:layout_width="0sp"
+                                android:layout_height="60sp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginTop="0sp"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="0sp"
+                                android:backgroundTint="@color/dark_green"
+                                android:fontFamily="@font/agbalumo"
+                                android:text="Generate"
+                                android:textSize="20sp"
+                                app:cornerRadius="0sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" "/>
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/qrCode"
+                                android:layout_width="0sp"
+                                android:layout_height="60sp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginTop="0sp"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="0sp"
+                                android:backgroundTint="@color/dark_green"
+                                android:fontFamily="@font/agbalumo"
+                                android:text="Scan"
+                                android:textSize="20sp"
+                                app:cornerRadius="0sp" />
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    app:cardCornerRadius="15sp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="180sp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/webcheck" />
 
                         <com.google.android.material.button.MaterialButton
-                            android:id="@+id/qrCode"
+                            android:id="@+id/webcheck"
                             android:layout_width="match_parent"
                             android:layout_height="60sp"
                             android:layout_gravity="bottom"
@@ -182,9 +211,10 @@
                             android:layout_marginBottom="-6sp"
                             android:backgroundTint="@color/dark_green"
                             android:fontFamily="@font/agbalumo"
-                            android:text="Scan and Ganerate"
+                            android:text="Check"
                             android:textSize="24sp"
                             app:cornerRadius="0sp" />
+
 
 
                     </LinearLayout>

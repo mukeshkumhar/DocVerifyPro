@@ -48,6 +48,7 @@
                     android:textStyle="bold" />
 
                 <ImageButton
+                    android:id="@+id/logoutBTN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -174,12 +175,12 @@
                     android:id="@+id/loadingView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
                     android:orientation="vertical">
                     <ProgressBar
                         android:id="@+id/progressBar"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
                     <TextView
                         android:id="@+id/loadingText"
                         android:layout_width="match_parent"
@@ -187,6 +188,7 @@
                         android:gravity="center"
                         android:textStyle="bold"
                         android:textColor="@color/white"
+                        android:visibility="gone"
                         android:text="Loading..."/>
                 </LinearLayout>
                 <androidx.appcompat.widget.AppCompatButton
