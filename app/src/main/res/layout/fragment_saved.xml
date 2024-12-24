@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
+    android:id="@+id/main"
     tools:context=".SavedFragment">
 
-    <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,14 +25,14 @@
                 android:layout_height="match_parent">
 
                 <ImageButton
-                    android:id="@+id/backBTN"
+                    android:id="@+id/saveBTN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10sp"
                     android:background="#00FFFFFF"
                     android:contentDescription="back"
-                    android:src="@drawable/back_svg"
+                    android:src="@drawable/save_icon"
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <TextView
@@ -47,6 +47,7 @@
                     android:textStyle="bold" />
 
                 <ImageButton
+                    android:id="@+id/logoutBTN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -90,7 +91,8 @@
                                 android:id="@+id/resumeheading"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Resume Heading"
+                                android:text="Selected Resume"
+                                android:textColor="@color/white"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
 
@@ -98,7 +100,8 @@
                                 android:id="@+id/resumeSubHeading_"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Resume subHeadding" />
+                                android:textStyle="italic"
+                                android:text="All Resume" />
                         </LinearLayout>
 
                         <ImageButton
@@ -139,7 +142,8 @@
                                 android:id="@+id/webHeading_1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Web Heading"
+                                android:text="Web Vernabality"
+                                android:textColor="@color/white"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
 
@@ -147,7 +151,8 @@
                                 android:id="@+id/websubHeading_1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Web subHeadding" />
+                                android:textStyle="italic"
+                                android:text="All Web Responce" />
                         </LinearLayout>
 
                         <ImageButton

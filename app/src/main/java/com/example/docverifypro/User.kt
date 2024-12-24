@@ -1,5 +1,7 @@
 package com.example.docverifypro
 
+import androidx.camera.video.VideoRecordEvent
+
 data class User(
     val _id: String?,
     val fullName: String?,
@@ -46,6 +48,104 @@ data class LoginResponse(
     val message: String,
     val success: Boolean,
 )
+
+// Resume Created Data Class
+
+data class ResumeCreate(
+    val name: String,
+    val contact: String,
+    val email: String,
+    val address: String,
+    val percentage: Number,
+)
+
+data class ResumeResponse(
+    val statusCode: Int,
+    val data: resumeDataResponse,
+    val message: String,
+    val success: Boolean
+)
+
+data class resumeDataResponse(
+    val _id: String,
+    val name: String,
+    val contact: String,
+    val email: String,
+    val address: String,
+    val percentage: Number,
+    val ownerId: String,
+    val projects: List<projectCreate>,
+    val __v: Int,
+)
+
+data class projectCreate(
+    val projectName: String,
+    val projectSummary: String,
+    val _id: String,
+)
+
+// Resume Add Project
+
+data class ProjectCreated (
+    val projectName: String,
+    val projectSummary: String,
+    val resumeId: String,
+)
+
+data class ProjectResponse(
+    val statusCode: Int,
+    val data: ProjectDataResponse,
+    val message: String,
+    val success: Boolean
+)
+
+data class ProjectDataResponse(
+    val _id: String,
+    val name: String,
+    val contact: String,
+    val email: String,
+    val address: String,
+    val percentage: Number,
+    val ownerId: String,
+    val projects: List<ProjectSave>,
+    val __v: Int,
+
+)
+data class ProjectSave(
+    val projectName: String,
+    val projectSummary: String,
+    val _id: String,
+)
+
+
+// Resume Get from mongodb
+
+data class ResumeMongoDB(
+    val statusCode: Int,
+    val data: List<ResumeMongoData>,
+    val message: String,
+    val success: Boolean
+)
+
+data class ResumeMongoData(
+    val _id: String,
+    val name: String,
+    val contact: String,
+    val email: String,
+    val address: String,
+    val percentage: Int,
+    val ownerId: String,
+    val projects: List<MongoProject>,
+    val __v: Int
+)
+
+data class MongoProject(
+    val projectName: String,
+    val projectSummary: String,
+    val _id: String
+)
+
+
 
 
 

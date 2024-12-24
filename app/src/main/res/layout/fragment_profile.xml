@@ -28,7 +28,7 @@
                     android:layout_marginLeft="10sp"
                     android:background="#00FFFFFF"
                     android:contentDescription="Home"
-                    android:src="@drawable/back_svg"
+                    android:src="@drawable/person_circle"
                     tools:ignore="TouchTargetSizeCheck" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -80,34 +80,116 @@
 
             <TextView
                 android:id="@+id/user_name_text"
-                android:layout_width="34dp"
-                android:layout_height="15dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:textSize="16sp"
                 android:text="Name"
                 android:textColor="@color/teal_200"
                 android:textStyle="bold" />
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="5sp"-->
+<!--                app:cardBackgroundColor="@color/dark_green"-->
+<!--                android:layout_margin="10sp"-->
+<!--                app:cardCornerRadius="10sp">-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="10sp"-->
+<!--                    android:orientation="horizontal">-->
+<!--                    <ImageView-->
+<!--                        android:layout_width="30sp"-->
+<!--                        android:layout_height="30sp"-->
+<!--                        android:src="@drawable/page"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:text="Your Resume"/>-->
+<!--                </LinearLayout>-->
+
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10sp"
                 android:layout_marginBottom="5sp"
                 app:cardBackgroundColor="@color/dark_green"
-                android:layout_margin="10sp"
                 app:cardCornerRadius="10sp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
                     android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="30sp"
-                        android:layout_height="30sp"
-                        android:src="@drawable/page"/>
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textColor="@color/white"
-                        android:text="Your Resume"/>
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:src="@drawable/password_icon"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2sp"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:text="Change Password"/>
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/change_password_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:rotation="180"
+                        android:layout_marginLeft="180sp"
+                        android:src="@drawable/back_svg"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:layout_marginBottom="5sp"
+                app:cardBackgroundColor="@color/dark_green"
+                app:cardCornerRadius="10sp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:src="@drawable/user_card"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:text="Profile Update"/>
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/update_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:rotation="180"
+                        android:layout_marginLeft="210sp"
+                        android:src="@drawable/back_svg"/>
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
@@ -150,45 +232,8 @@
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10sp"
-                android:layout_marginBottom="5sp"
-                app:cardBackgroundColor="@color/dark_green"
-                app:cardCornerRadius="10sp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10sp"
-                    android:orientation="horizontal">
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="30sp"
-                            android:layout_height="30sp"
-                            android:src="@drawable/logout"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textColor="@color/white"
-                            android:text="Change Password"/>
-                    </LinearLayout>
 
-                    <ImageButton
-                        android:id="@+id/change_password_button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/transparent"
-                        android:rotation="180"
-                        android:layout_marginLeft="180sp"
-                        android:src="@drawable/back_svg"/>
-                </LinearLayout>
 
-            </com.google.android.material.card.MaterialCardView>
 
 
         </LinearLayout>

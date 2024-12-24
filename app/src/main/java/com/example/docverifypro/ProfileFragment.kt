@@ -31,7 +31,7 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val sharedPreferences = requireContext().getSharedPreferences("user_data", Context.MODE_PRIVATE)
-        val fullName = sharedPreferences.getString("full_name", null)
+        val fullName = sharedPreferences.getString("user_fullname", null)
 
             binding.userNameText.text = fullName
 

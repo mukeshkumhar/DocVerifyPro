@@ -1,6 +1,8 @@
 package com.example.docverifypro
 
 import android.Manifest
+import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
@@ -18,20 +20,23 @@ import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.docverifypro.databinding.ActivityQrcodeBinding
+import com.example.docverifypro.databinding.ActivityScanResumeBinding
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.common.InputImage
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
 class QRCode : AppCompatActivity() {
-
+    private lateinit var binding: ActivityQrcodeBinding
     private lateinit var previewView: PreviewView
     private lateinit var cameraExecutor: ExecutorService
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_qrcode)
+        binding =ActivityQrcodeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -39,11 +44,26 @@ class QRCode : AppCompatActivity() {
         }
 
         // Initialize CameraX components
-        previewView = findViewById(R.id.previewView)
+        previewView = binding.previewView
         cameraExecutor = Executors.newSingleThreadExecutor()
 
         // Check for camera permissions
         checkPermissionsAndStartCamera()
+        binding.backBTN.setOnClickListener{
+            finish()
+        }
+
+        binding.logoutBTN.setOnClickListener{
+            val sharedPreferences = this.getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.remove("AccessToken")
+            editor.apply()
+
+            // Optional: Navigate to login screen or perform other logout actions
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            this.finish()
+        }
 
 
     }
@@ -105,7 +125,7 @@ class QRCode : AppCompatActivity() {
 
     @OptIn(ExperimentalGetImage::class)
     private fun processImage(imageProxy: androidx.camera.core.ImageProxy) {
-        val textview = findViewById<TextView>(R.id.qrCodeResult)
+        val qrResult = binding.qrCodeResult
         val mediaImage = imageProxy.image
         if (mediaImage != null) {
             val image = InputImage.fromMediaImage(mediaImage, imageProxy.imageInfo.rotationDegrees)
@@ -115,7 +135,7 @@ class QRCode : AppCompatActivity() {
                 .addOnSuccessListener { barcodes ->
                     for (barcode in barcodes) {
                         val rawValue = barcode.rawValue
-                        textview.text = rawValue
+                        qrResult.text = rawValue
                         Log.d("QRScanner", "Scanned value: $rawValue")
                         Toast.makeText(this, "Scanned: $rawValue", Toast.LENGTH_SHORT).show()
                     }
