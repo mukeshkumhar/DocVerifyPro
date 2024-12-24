@@ -4,6 +4,12 @@
 
 <p id="description">DocVerifyPro is an innovative and efficient Android application designed to streamline document verification processes for recruitment and other professional purposes. Built using Kotlin in Android Studio with a robust Node.js backend and MongoDB database this app offers a seamless and user-friendly platform for managing resumes and detecting vulnerabilities in applications.</p>
 
+<p align="center"><img src="https://img.shields.io/badge/7th_Sem_Collage_Project-Like_this-green" alt="shields"></p>
+
+<h2>Project Screenshots:</h2>
+
+<img src="ghjg" alt="project-screenshot" width="400" height="900/">
+
   
   
 <h2>🧐 Features</h2>
