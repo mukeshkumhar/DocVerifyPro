@@ -28,11 +28,11 @@ class ResumeRecycleViewAdapter(private val resumeList: List<ResumeMongoData>): R
 
     override fun onBindViewHolder(holder: ResumeViewHolder, position: Int) {
         val resume = resumeList[position]
-        holder.nameTextView.text = resume.name
-        holder.contactTextView.text = resume.contact
-        holder.emailTextView.text = resume.email
-        holder.addressTextView.text = resume.address
-        holder.percentageTextView.text = resume.percentage.toString()
+        holder.nameTextView.text = "Name: " + resume.name
+        holder.contactTextView.text = "Contact no: "+resume.contact
+        holder.emailTextView.text ="Email: "+ resume.email
+        holder.addressTextView.text ="Address: "+ resume.address
+        holder.percentageTextView.text = "Percentage: "+ resume.percentage.toString()
 
         val projectAdapter = ProjectAdapter(resume.projects)
         holder.projectsRecyclerView.layoutManager = LinearLayoutManager(holder.itemView.context)

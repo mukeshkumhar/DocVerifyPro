@@ -201,7 +201,7 @@ class ScanResumeActivity : AppCompatActivity() {
 
                         val gson = Gson()
                         val user: ResumeData = gson.fromJson(jsonFinal, ResumeData::class.java)
-                        val name = user.name.toString()
+                        val name =  user.name.toString()
                         val contact = user.contact.toString()
                         val email = user.email.toString()
                         val address = user.address.toString()
@@ -224,7 +224,7 @@ class ScanResumeActivity : AppCompatActivity() {
                                         println(response.body())
 
                                         Toast.makeText(this@ScanResumeActivity, response.body()?.message, Toast.LENGTH_SHORT).show()
-                                        binding.output.setText(user.name+"\n"+user.contact+"\n"+user.email+"\n"+user.address+"\n"+user.percentage)
+                                        binding.output.setText("Name: "+user.name+"\n"+"Contact: "+user.contact+"\n"+"Email: "+user.email+"\n"+"Addess: "+user.address+"\n"+"Percentage: "+user.percentage)
                                         val resumeId = response.body()?.data?._id
                                         user.projects.forEachIndexed{index,project ->
                                             val projectName = project.name.toString()
@@ -252,6 +252,8 @@ class ScanResumeActivity : AppCompatActivity() {
                                                     Toast.makeText(this@ScanResumeActivity, "Adding Project failed due to network error", Toast.LENGTH_SHORT).show()
                                                 }
                                             })
+
+
                                         }
                                     } else {
                                         val errorBody = response.errorBody()?.string()
@@ -287,14 +289,14 @@ class ScanResumeActivity : AppCompatActivity() {
                             projectsText.append("   ${project.summary}\n")
                         }
                         binding.project.text = projectsText.toString()
-                        loadingText.visibility = View.GONE
-                        progressBar.visibility = View.GONE
+//                        loadingText.visibility = View.GONE
+//                        progressBar.visibility = View.GONE
                     }
                 }else{
                     binding.output.setText("I will give answer only resume related questions")
                 }
-                loadingText.visibility = View.GONE
-                progressBar.visibility = View.GONE
+//                loadingText.visibility = View.GONE
+//                progressBar.visibility = View.GONE
 
             } else {
                 Toast.makeText(this, "Please select files first", Toast.LENGTH_SHORT).show()

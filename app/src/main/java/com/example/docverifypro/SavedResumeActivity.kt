@@ -10,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.docverifypro.databinding.ActivitySavedResumeBinding
@@ -37,19 +38,26 @@ class SavedResumeActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-//        binding.backBTN.setOnClickListener{
-//            val intent = Intent(this,SavedFragment::class.java)
-//            startActivity(intent)
-//        }
+        binding.backBTN.setOnClickListener{
 
-        // In SavedResumeActivity:
-        binding.backBTN.setOnClickListener {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.saved_fragment_page, SavedFragment())
+                .replace(R.id.frame_layout, SavedFragment())
                 .addToBackStack(null)
                 .commit()
-            finish()
+
+//            val intent = Intent(this,HomeFragment::class.java)
+//            startActivity(intent)
         }
+
+//
+//
+//            binding.backBTN.setOnClickListener {
+//                supportFragmentManager.beginTransaction()
+//                .replace(R.id.frame_layout, SavedFragment())
+//                .addToBackStack(null)
+//                .commit()
+//            }
+//        }
 
 //        supportFragmentManager.beginTransaction()
 //            .replace(R.id.fragment_container, SavedResumeActivity())
@@ -88,6 +96,7 @@ class SavedResumeActivity : AppCompatActivity() {
 
                     val resumeAdapter = ResumeRecycleViewAdapter(resumeMongoDBResponse!!.data)
                     recyclerView.adapter = resumeAdapter
+                    binding.progressbar.visibility = android.view.View.GONE
 
 //                    val projectAdapter = ProjectAdapter(projectMD)
 //                    recyclerView.adapter = projectAdapter

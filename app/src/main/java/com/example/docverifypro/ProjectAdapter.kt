@@ -23,8 +23,8 @@ RecyclerView.Adapter<ProjectAdapter.ProjectViewHolder>(){
 
     override fun onBindViewHolder(holder: ProjectAdapter.ProjectViewHolder, position: Int) {
         val project = projects[position]
-        holder.projectNameTextView.text =project.projectName
-        holder.projectSummaryTextView.text = project.projectSummary
+        holder.projectNameTextView.text ="Project Name: "+project.projectName
+        holder.projectSummaryTextView.text ="Project Summary: "+ project.projectSummary
     }
 
     override fun getItemCount(): Int {

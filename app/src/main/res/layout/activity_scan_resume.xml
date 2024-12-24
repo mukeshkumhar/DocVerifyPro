@@ -168,7 +168,7 @@
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="@color/white"
-                    android:textColorHint="@color/purple_500"
+                    android:textColorHint="@color/purple_100"
                     android:padding="10sp"
                     android:background="@drawable/drop_down_field"/>
                 <LinearLayout
@@ -199,32 +199,68 @@
                     android:layout_gravity="center"
                     android:background="@drawable/button_background"
                     android:text="Scan ->"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/purple_200"
+                    android:layout_marginTop="20sp"
+                    app:cardCornerRadius="10sp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/output"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textColor="@color/white"
+                            android:scrollbars="vertical"
+                            android:text="Details"
+                            android:textIsSelectable="true" />
+                        <TextView
+                            android:id="@+id/project"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textColor="@color/white"
+                            android:scrollbars="vertical"
+                            android:text="Projects"
+                            android:textIsSelectable="true" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+<!--                <TextView-->
+<!--                    android:id="@+id/output"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:scrollbars="vertical"-->
+<!--                    android:text="TextView"-->
+<!--                    android:textIsSelectable="true" />-->
+<!--                <TextView-->
+<!--                    android:id="@+id/project"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:scrollbars="vertical"-->
+<!--                    android:text=""-->
+<!--                    android:textIsSelectable="true" />-->
                 <TextView
                     android:id="@+id/extractedText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Response"
                     android:textColor="@color/white"/>
-                <TextView
-                    android:id="@+id/output"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:padding="10dp"
-                    android:scrollbars="vertical"
-                    android:text="TextView"
-                    android:textIsSelectable="true" />
-                <TextView
-                    android:id="@+id/project"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:padding="10dp"
-                    android:scrollbars="vertical"
-                    android:text=""
-                    android:textIsSelectable="true" />
             </LinearLayout>
 
 
