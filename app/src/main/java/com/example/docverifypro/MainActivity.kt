@@ -24,30 +24,43 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        replaceFragment(HomeFragment())
+//        replaceFragment(HomeFragment())
 
         binding.bottomNavigationView.setOnItemSelectedListener { item ->
             when(item.itemId) {
                 R.id.navigation_home -> {
 
-                    supportFragmentManager.beginTransaction().replace(R.id.frame_layout, HomeFragment()).commit()
-
+//                    supportFragmentManager.beginTransaction().replace(R.id.frame_layout, HomeFragment()).commit()
+                    replaceFragment(HomeFragment())
                     true
                 }
                 R.id.navigation_saved -> {
 
 
-                    supportFragmentManager.beginTransaction().replace(R.id.frame_layout, SavedFragment()).commit()
+//                    supportFragmentManager.beginTransaction().replace(R.id.frame_layout, SavedFragment()).commit()
+                    replaceFragment(SavedFragment())
                     true
                 }
                 R.id.navigation_profile -> {
 
-                    supportFragmentManager.beginTransaction().replace(R.id.frame_layout, ProfileFragment()).commit()
+//                    supportFragmentManager.beginTransaction().replace(R.id.frame_layout, ProfileFragment()).commit()
+                    replaceFragment(ProfileFragment())
                     true
                 }
 
                 else -> false
             }
+        }
+        val fragmentToLoad = intent.getStringExtra("fragmentToLoad")
+        if (fragmentToLoad == "profile") {
+            replaceFragment(ProfileFragment())
+            binding.bottomNavigationView.selectedItemId = R.id.navigation_profile
+        } else if(fragmentToLoad == "saved") {
+            replaceFragment(SavedFragment())
+            binding.bottomNavigationView.selectedItemId = R.id.navigation_saved
+        } else {
+            replaceFragment(HomeFragment())
+            binding.bottomNavigationView.selectedItemId = R.id.navigation_home
         }
     }
     private fun replaceFragment(fragment: Fragment){

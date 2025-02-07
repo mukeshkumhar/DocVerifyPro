@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.docverifypro.databinding.FragmentHome2Binding
 import com.example.docverifypro.databinding.FragmentProfileBinding
+import com.google.android.material.transition.platform.MaterialSharedAxis
 
 
 class ProfileFragment : Fragment() {
@@ -29,6 +30,9 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        enterTransition = MaterialSharedAxis(MaterialSharedAxis.X, true).apply { duration = 500 }
+        exitTransition = MaterialSharedAxis(MaterialSharedAxis.X, false).apply { duration = 500 }
 
         val sharedPreferences = requireContext().getSharedPreferences("user_data", Context.MODE_PRIVATE)
         val fullName = sharedPreferences.getString("user_fullname", null)

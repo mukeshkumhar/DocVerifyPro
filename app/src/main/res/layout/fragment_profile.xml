@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/background"
-
+    android:id="@+id/main"
     tools:context=".ProfileFragment">
 
     <LinearLayout
@@ -65,6 +65,7 @@
                 android:layout_height="100sp"
                 android:clipToPadding="false"
                 android:layout_gravity="center"
+                app:strokeWidth="0sp"
                 android:layout_marginTop="20sp"
                 app:cardCornerRadius="50sp">
                 <ImageButton
@@ -119,6 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10sp"
                 android:layout_marginBottom="5sp"
+                app:strokeWidth="0sp"
                 app:cardBackgroundColor="@color/dark_green"
                 app:cardCornerRadius="10sp">
                 <LinearLayout
@@ -149,7 +151,7 @@
                         android:layout_height="wrap_content"
                         android:background="@color/transparent"
                         android:rotation="180"
-                        android:layout_marginLeft="180sp"
+                        android:layout_marginLeft="184sp"
                         android:src="@drawable/back_svg"/>
                 </LinearLayout>
 
@@ -159,6 +161,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10sp"
                 android:layout_marginBottom="5sp"
+                app:strokeWidth="0sp"
                 app:cardBackgroundColor="@color/dark_green"
                 app:cardCornerRadius="10sp">
                 <LinearLayout
@@ -198,6 +201,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10sp"
                 android:layout_marginBottom="5sp"
+                app:strokeWidth="0sp"
                 app:cardBackgroundColor="@color/dark_green"
                 app:cardCornerRadius="10sp">
                 <LinearLayout
@@ -227,7 +231,7 @@
                         android:layout_height="wrap_content"
                         android:background="@color/transparent"
                         android:rotation="180"
-                        android:layout_marginLeft="250sp"
+                        android:layout_marginLeft="255sp"
                         android:src="@drawable/back_svg"/>
                 </LinearLayout>
 

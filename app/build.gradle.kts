@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.docverifypro"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.docverifypro"
@@ -63,6 +63,14 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
     implementation ("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("androidx.activity:activity-ktx:1.8.2")
+
+
+//    implementation("com.google.android.material:material:1.9.0")
+//    implementation ("androidx.navigation:navigation-fragment-ktx:2.5.3")
+//    implementation ("androidx.navigation:navigation-ui-ktx:2.5.3")
+//    implementation("androidx.compose.material3:material3:1.3.1")
+//    implementation("androidx.compose.material3:material3-window-size-class:1.3.1")
+//    implementation("androidx.compose.material3:material3-adaptive-navigation-suite:1.4.0-alpha05")
 //    QR code caner or generater
     implementation("com.itextpdf:itextg:5.5.9")
     implementation("org.apache.poi:poi-ooxml:5.2.3")

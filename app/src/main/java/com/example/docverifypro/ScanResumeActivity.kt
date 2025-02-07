@@ -8,6 +8,7 @@ import android.database.Cursor
 import android.net.Uri
 import android.os.Bundle
 import android.provider.OpenableColumns
+import android.transition.TransitionInflater
 import android.util.Log
 import android.view.View
 import android.widget.Toast
@@ -15,10 +16,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.result.launch
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityOptionsCompat
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.add
+import androidx.navigation.findNavController
 import com.example.docverifypro.databinding.ActivityScanResumeBinding
 import com.google.ai.client.generativeai.GenerativeModel
 import com.google.gson.Gson
@@ -70,6 +73,15 @@ class ScanResumeActivity : AppCompatActivity() {
             insets
         }
 
+        window.sharedElementEnterTransition = TransitionInflater.from(this).inflateTransition(R.transition.change_bounds)
+
+        binding.backBTN.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("fragmentToLoad", "Home")
+            startActivity(intent)
+            finish()
+        }
+
         val sharedPreferences = getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
         println("AccessToken Checking -> ${sharedPreferences.getString("AccessToken", null)}")
         val authInterceptor = AuthInterceptor(sharedPreferences)
@@ -86,9 +98,6 @@ class ScanResumeActivity : AppCompatActivity() {
 
         val apiServiceWithInterceptor = retrofit.create(ApiService::class.java)
 
-        binding.backBTN.setOnClickListener{
-            finish()
-        }
 
         binding.logoutBTN.setOnClickListener{
             val sharedPreferences = this.getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
@@ -104,8 +113,6 @@ class ScanResumeActivity : AppCompatActivity() {
 
         val loadingText = binding.loadingText
         val progressBar = binding.progressBar
-
-
 
 
         // File Picker
@@ -137,6 +144,7 @@ class ScanResumeActivity : AppCompatActivity() {
             }
             pickMultipleFiles.launch(intent)
         }
+
         fun isResumeRelated(prompt: String): Boolean{
             val resumeKeywords = listOf("resume",
                 "education",

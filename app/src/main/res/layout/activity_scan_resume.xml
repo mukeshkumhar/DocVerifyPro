@@ -97,22 +97,33 @@
 <!--                    android:layout_gravity="center"-->
 <!--                    android:background="@drawable/button_background"-->
 <!--                    android:text="Create New Skill"/>-->
-
-                <androidx.appcompat.widget.AppCompatImageButton
-                    android:id="@+id/addResume"
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="50sp"
-                    android:layout_marginTop="10sp"
-                    android:layout_gravity="center"
-                    android:background="@color/light_blue"
-                    android:src="@drawable/add_square"/>
+                    android:layout_marginTop="20sp"
+                    app:strokeWidth="0sp"
+                    app:cardCornerRadius="20sp"
+                    android:layout_gravity="center">
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/addResume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="50sp"
+                        android:layout_gravity="center"
+                        android:transitionName="resumeTransition"
+
+                        android:background="@color/light_blue"
+                        android:src="@drawable/add_square"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
                 <TextView
                     android:id="@+id/selectedFilesCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:textStyle="normal"
                     android:textColor="@color/white"
                     android:text="Click on + icon to add resume"/>
@@ -203,13 +214,14 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:cardBackgroundColor="@color/purple_200"
+                    app:cardBackgroundColor="@color/recycler_view"
                     android:layout_marginTop="20sp"
                     app:cardCornerRadius="10sp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10sp"
+                        android:background="@color/transparent"
                         android:orientation="vertical">
                         <TextView
                             android:id="@+id/output"
@@ -217,6 +229,7 @@
                             android:layout_height="wrap_content"
                             android:padding="10dp"
                             android:textColor="@color/white"
+                            android:background="@color/transparent"
                             android:scrollbars="vertical"
                             android:text="Details"
                             android:textIsSelectable="true" />

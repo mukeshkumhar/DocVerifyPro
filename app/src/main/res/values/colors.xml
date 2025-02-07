@@ -12,9 +12,9 @@
     <color name="light_blue">#549AF6</color>
     <color name="light_blue_nave">#119AF1</color>
     <color name="transparent">#00FFFFFF</color>
-
     <color name="nav_selected_color">#FF6200EE</color> <!-- Purple for selected -->
     <color name="nav_unselected_color">#FFBDBDBD</color> <!-- Light gray for unselected -->
     <color name="nav_background_color">#FFFFFF</color>
+    <color name="recycler_view">#213147</color>
 </resources>
 

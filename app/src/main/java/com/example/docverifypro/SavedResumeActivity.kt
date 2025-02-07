@@ -40,10 +40,15 @@ class SavedResumeActivity : AppCompatActivity() {
         }
         binding.backBTN.setOnClickListener{
 
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.frame_layout, SavedFragment())
-                .addToBackStack(null)
-                .commit()
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("fragmentToLoad", "saved")
+            startActivity(intent)
+            finish()
+
+//            supportFragmentManager.beginTransaction()
+//                .replace(R.id.frame_layout, SavedFragment())
+//                .addToBackStack(null)
+//                .commit()
 
 //            val intent = Intent(this,HomeFragment::class.java)
 //            startActivity(intent)

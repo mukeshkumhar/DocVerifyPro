@@ -18,16 +18,16 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class LoginActivity : AppCompatActivity() {
 
-    private val retrofit by lazy {
-        Retrofit.Builder()
-            .baseUrl(RetrofitInstance.BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-    }
+//    private val retrofit by lazy {
+//        Retrofit.Builder()
+//            .baseUrl(RetrofitInstance.BASE_URL)
+//            .addConverterFactory(GsonConverterFactory.create())
+//            .build()
+//    }
 
-    private val apiService by lazy {
-        retrofit.create(ApiService::class.java)
-    }
+//    private val apiService by lazy {
+//        retrofit.create(ApiService::class.java)
+//    }
 
     private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {

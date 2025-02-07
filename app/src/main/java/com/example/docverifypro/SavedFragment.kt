@@ -7,9 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
-import com.example.docverifypro.databinding.FragmentHome2Binding
 import com.example.docverifypro.databinding.FragmentSavedBinding
+import com.google.android.material.transition.platform.MaterialSharedAxis
 
 
 class SavedFragment : Fragment() {
@@ -20,6 +19,11 @@ class SavedFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+//        enterTransition = MaterialFadeThrough().apply { duration = 1000 }
+//        exitTransition = MaterialFadeThrough().apply { duration = 1000 }
+        enterTransition = MaterialSharedAxis(MaterialSharedAxis.X, true).apply { duration = 500 }
+        exitTransition = MaterialSharedAxis(MaterialSharedAxis.X, false).apply { duration = 500 }
 
         binding.resumeSavedBtn.setOnClickListener {
             val intent = Intent(requireContext(), SavedResumeActivity::class.java)
