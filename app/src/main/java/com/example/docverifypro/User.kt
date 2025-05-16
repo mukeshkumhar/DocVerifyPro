@@ -133,7 +133,7 @@ data class ResumeMongoData(
     val contact: String,
     val email: String,
     val address: String,
-    val percentage: Int,
+    val percentage: Double,
     val ownerId: String,
     val projects: List<MongoProject>,
     val __v: Int
